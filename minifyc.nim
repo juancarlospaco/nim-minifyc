@@ -48,7 +48,7 @@ const
     ("\n\n\n\n", "\n"),
   ]
 
-for cfile in walkFiles(getCurrentDir() / "c_code/**/*.c"):
+for cfile in walkFiles(getCurrentDir() / "**/*.c"):
   let
     oldc = readFile(cfile)
     newc = multiReplace(oldc, replacementsC).strip
